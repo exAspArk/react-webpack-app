@@ -30,7 +30,10 @@ module.exports = {
       {
         test: /\.css$/,
         include: [path.resolve(__dirname, 'src')],
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: 'css-loader', options: { modules: true, importLoaders: 1, localIdentName: devMode ? '[local]-[hash:base64:5]' : null } },
+        ],
       },
     ],
   },

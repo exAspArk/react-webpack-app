@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import styles from './app.css';
+
 const Home = () => (
   <h1>Hello World</h1>
 );
 
 const Parrot = ({ match }) => (
-  <h1>Hello {match.params.path}</h1>
+  <h1 className={styles.gray}>Hello {match.params.path}</h1>
 );
 
 const App = () => (
