@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'app.js',
+    filename: 'app.[chunkhash].js',
     publicPath: '/',
   },
   module: {
