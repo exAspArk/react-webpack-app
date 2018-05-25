@@ -26,7 +26,13 @@ yarn run lint
 yarn run dev
 ```
 
-* Open [localhost:8080](http://localhost:8080/) in browser.
+* Open [localhost:8080](http://localhost:8080/) in browser:
+
+![Hello World](./screenshots/hello-world.png)
+
+* Try any other URL paths. For example, [localhost:8080/Foo](http://localhost:8080/Foo):
+
+![Hello World](./screenshots/hello-foo.png)
 
 ## Building in production environment:
 
