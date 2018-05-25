@@ -6,19 +6,31 @@ The simplest Single-Page Application with React 16 and Webpack 4.
 
 * Install [Yarn](https://yarnpkg.com/lang/en/docs/install).
 
-* Install npm packages:
+* Install NPM packages:
 
 ```
 yarn install
 ```
 
-* Run in development environment:
+## Running linters:
+
+```
+yarn run lint
+```
+
+## Running in development environment
+
+* Start Webpack:
 
 ```
 yarn run dev
 ```
 
-* Build in production environment:
+* Open [localhost:8080](http://localhost:8080/) in browser.
+
+## Building in production environment:
+
+* Compile:
 
 ```
 yarn run build
