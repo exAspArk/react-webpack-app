@@ -3,7 +3,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --mode development --hot --watch-stdin",
-    "lint": "eslint ./src"
+    "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "react": "^16.4.0",

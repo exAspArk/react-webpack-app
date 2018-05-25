@@ -1,7 +1,8 @@
 const path = require('path');
+
 const devMode = process.env.NODE_ENV !== 'production';
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -23,14 +24,14 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        include: [path.resolve(__dirname, "src")],
+        include: [path.resolve(__dirname, 'src')],
         use: { loader: 'babel-loader' },
       },
       {
         test: /\.css$/,
-        include: [path.resolve(__dirname, "src")],
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      }
+        include: [path.resolve(__dirname, 'src')],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
     ],
   },
   resolve: {
@@ -39,11 +40,11 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
       filename: devMode ? 'app.css' : 'app.[hash].css',
       chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
-    })
+    }),
   ],
 };
