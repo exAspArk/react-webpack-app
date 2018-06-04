@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
-  devServer: { historyApiFallback: true },
   devtool: 'source-maps',
   entry: './src/app.js',
   output: {

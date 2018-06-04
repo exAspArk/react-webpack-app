@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production --config config/webpack.config.production.js",
-    "dev": "webpack-dev-server --mode development --hot --watch-stdin --config config/webpack.config.development.js",
+    "start": "webpack-dev-server --mode development --hot --watch-stdin --config config/webpack.config.development.js",
     "lint": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",

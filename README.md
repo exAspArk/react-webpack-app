@@ -23,7 +23,7 @@ yarn run lint
 * Start Webpack:
 
 ```
-yarn run dev
+yarn run start
 ```
 
 * Open [localhost:8080](http://localhost:8080/) in browser:
