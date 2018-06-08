@@ -7,6 +7,7 @@ module.exports = {
   "parser": "babel-eslint",
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/prop-types": [0]
+    "react/prop-types": [0],
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
   },
 };
