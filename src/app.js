@@ -2,15 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import styles from './app.css';
+import asyncComponent from './lib/async-component';
 
-const Home = () => (
-  <h1>Hello World</h1>
-);
+import _style from './app.css'; // eslint-disable-line no-unused-vars
 
-const Parrot = ({ match }) => (
-  <h1 className={styles.gray}>Hello {match.params.path}</h1>
-);
+const Home = asyncComponent(() => import(/* webpackChunkName: "routes-home" */ './routes/home/index.js'));
+const Parrot = asyncComponent(() => import(/* webpackChunkName: "routes-parrot" */ './routes/parrot/index.js'));
 
 const App = () => (
   <BrowserRouter>

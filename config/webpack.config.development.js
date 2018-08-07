@@ -23,7 +23,10 @@ module.exports = {
         include: [path.resolve(__dirname, '../src')],
         use: [
           MiniCssExtractPlugin.loader,
-          { loader: 'css-loader', options: { modules: true, importLoaders: 1, localIdentName: '[local]-[hash:base64:5]' } },
+          {
+            loader: 'css-loader',
+            options: { modules: true, importLoaders: 1, localIdentName: '[local]-[hash:base64:5]' },
+          },
         ],
       },
     ],
