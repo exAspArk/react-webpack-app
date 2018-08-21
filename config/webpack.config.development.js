@@ -2,6 +2,7 @@ const path = require('path');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
   devServer: { historyApiFallback: true },
@@ -26,6 +27,15 @@ module.exports = {
           {
             loader: 'css-loader',
             options: { modules: true, importLoaders: 1, localIdentName: '[local]-[hash:base64:5]' },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                postcssPresetEnv(),
+              ],
+            },
           },
         ],
       },

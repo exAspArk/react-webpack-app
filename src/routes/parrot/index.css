@@ -1,3 +1,7 @@
+.container {
+  user-select: none;
+}
+
 .gray {
   color: gray;
 }
